@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>查找学生</title>
+    <style>
+        body { background-color: white; font-family: Arial, sans-serif; }
+        .container { width: 300px; margin: auto; padding-top: 50px; }
+        input[type=text] { width: 100%; padding: 12px 20px; margin: 8px 0; box-sizing: border-box; }
+        button { width: 100%; background-color: #4CAF50; color: white; padding: 14px 20px; margin: 8px 0; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>请输入学生学号</h2>
+    <form action="/find" method="post">
+        <label for="studentId">学号：</label>
+        <input type="text" id="studentId" name="id" placeholder="请输入学号"/>
+    <button type="submit">查询</button>
+</form>
+</div>
+</body>
+</html>

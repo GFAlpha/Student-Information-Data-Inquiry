@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生信息</title>
+    <style>
+        body { background-color: white; font-family: Arial, sans-serif; }
+        .container { width: 300px; margin: auto; padding-top: 50px; text-align: center; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <p th:if="${student != null}" style="color:black;">
+        学号：<span th:text="${student.id}"></span><br/>
+        姓名：<span th:text="${student.name}"></span><br/>
+        班级：<span th:text="${student.className}"></span>
+    </p>
+    <p th:if="${student == null}" style="color:red;">
+        没有找到该学生的信息。
+    </p>
+    <a href="/">返回</a>
+</div>
+</body>
+</html>
